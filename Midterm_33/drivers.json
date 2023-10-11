@@ -1,0 +1,58 @@
+{
+    "drivers": [
+        {
+            "name": "Callaway Mavrik",
+            "brand": "Callaway",
+            "year": 2020,
+            "url": "https://academy.scene7.com/is/image/academy/20624901"
+        },
+        {
+            "name": "TaylorMade Stealth 2",
+            "brand": "TaylorMade",
+            "year": 2023,
+            "url": "https://truespecgolf.com/wp-content/uploads/2023/01/TM23CWD-TA101-Stealth-2-Plus-LFS-OSN-24324-v1-scaled.jpg"
+        },
+        {
+            "name": "PING G425 Max",
+            "brand": "PING",
+            "year": 2021,
+            "url": "https://www.americangolf.co.uk/on/demandware.static/-/Sites-master-catalog/default/dw99b1ab12/images-square/zoom/369531-PING-G425-Max-Driver-1.jpg"
+        },
+        {
+            "name": "Callaway Paradym",
+            "brand": "Callaway",
+            "year": 2023,
+            "url": "https://cdn.golfmagic.com/DRIVER1.png"
+        },
+        {
+            "name": "TaylorMade SIM2",
+            "brand": "TaylorMade",
+            "year": 2021,
+            "url": "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2021/hotlist-2021/drivers/revised-hero-images/EDIT_CLUBS_0006_GD0221_HL_DRIVER_TAYLORMADE_SIM2_HERO.jpg.rend.hgtvcom.1850.1850.suffix/1612884822432.jpeg"
+        },
+        {
+            "name": "Titleist TSi3",
+            "brand": "Titleist",
+            "year": 2020,
+            "url": "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2021/hotlist-2021/drivers/revised-hero-images/EDIT_CLUBS_0002_GD0221_HL_DRIVER_TITLEIST_TSi3_HERO.jpg.rend.hgtvcom.1850.1850.suffix/1612884819435.jpeg"
+        },
+        {
+            "name": "Titleist TSR2",
+            "brand": "Titleist",
+            "year": 2022,
+            "url": "https://www.golfwrx.com/wp-content/uploads/2022/09/IMG_6484.jpeg"
+        },
+        {
+            "name": "Wilson Dynapower",
+            "brand": "Wilson",
+            "year": 2023,
+            "url": "https://www.golfalot.com/Portals/0/imagesblogs/wilson/dynapowerdriver/dynapower_hero.jpg"
+        },
+        {
+            "name": "Callaway Epic Speed",
+            "brand": "Callaway",
+            "year": 2021,
+            "url": "https://golfweek.usatoday.com/wp-content/uploads/sites/87/2021/01/Callaway-Epic-Speed-driver.jpg"
+        }
+    ]
+}
