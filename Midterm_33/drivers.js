@@ -27,9 +27,9 @@ function loadDrivers(myDrivers) {
         let year = myDrivers.drivers[i].year;
         let url = myDrivers.drivers[i].url;
         let imgDriver = document.createElement("div");
-        imgMovie.innerHTML = `<img src=${url} class="card-img-top" alt="..."></img>`;
-        let txtMovie = document.createElement("p");
-        txtMovie.innerHTML = `<p class="card-text"> <strong>${title}</strong>, ${year}</p>`;
+        imgDriver.innerHTML = `<img src=${url} class="card-img-top" alt="..."></img>`;
+        let txtDriver = document.createElement("p");
+        txtDriver.innerHTML = `<p class="card-text"> <strong>${title}</strong>, ${year}</p>`;
 
         if (myDrivers.drivers[i].name === "mavrik") {
             imgDriver1.appendChild(imgDriver);
