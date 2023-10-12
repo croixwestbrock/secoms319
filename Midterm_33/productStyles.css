@@ -1,0 +1,11 @@
+#price {
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+li {
+    padding: 5px 0px;
+}
+#information {
+    font-family: 'Times New Roman', Times, serif;
+}
