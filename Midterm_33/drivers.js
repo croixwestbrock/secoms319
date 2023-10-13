@@ -31,31 +31,31 @@ function loadDrivers(myDrivers) {
         let txtDriver = document.createElement("p");
         txtDriver.innerHTML = `<p class="card-text"> <strong>${title}</strong>, ${year}</p>`;
 
-        if (myDrivers.drivers[i].name === "mavrik") {
+        if (myDrivers.drivers[i].name === "Callaway Mavrik") {
             imgDriver1.appendChild(imgDriver);
             txtDriver1.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "dynapower") {
+        } else if (myDrivers.drivers[i].name === "Wilson Dynapower") {
             imgDriver2.appendChild(imgDriver);
             txtDriver2.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "epicspeed") {
+        } else if (myDrivers.drivers[i].name === "Callaway Epic Speed") {
             imgDriver3.appendChild(imgDriver);
             txtDriver3.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "g425max") {
+        } else if (myDrivers.drivers[i].name === "PING G425 Max") {
             imgDriver4.appendChild(imgDriver);
             txtDriver4.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "paradym") {
+        } else if (myDrivers.drivers[i].name === "Callaway Paradym") {
             imgDriver5.appendChild(imgDriver);
             txtDriver5.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "sim2") {
+        } else if (myDrivers.drivers[i].name === "TaylorMade SIM2") {
             imgDriver6.appendChild(imgDriver);
             txtDriver6.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "stealth2") {
+        } else if (myDrivers.drivers[i].name === "TaylorMade Stealth 2") {
             imgDriver7.appendChild(imgDriver);
             txtDriver7.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "tsi3") {
+        } else if (myDrivers.drivers[i].name === "Titleist TSi 3") {
             imgDriver8.appendChild(imgDriver);
             txtDriver8.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "tsr2") {
+        } else if (myDrivers.drivers[i].name === "Titleist TSR 2") {
             imgDriver9.appendChild(imgDriver);
             txtDriver9.appendChild(txtDriver);
         }
