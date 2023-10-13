@@ -29,35 +29,46 @@ function loadDrivers(myDrivers) {
         let price = myDrivers.drivers[i].price;
         let imgDriver = document.createElement("div");
         imgDriver.innerHTML = `<img src=${url} class="card-img-top" alt="..."></img>`;
-        let txtDriver = document.createElement("p");
-        txtDriver.innerHTML = `<p class="card-text"> <strong>${name}</strong>, ${year}, ${price}</p>`;
+        let titleDriver = document.createElement("h4");
+        titleDriver.innerHTML = `<h4 class="card-text"> <strong>${name}</strong> - ${year}</h4>`
+        let txtDriver = document.createElement("h5");
+        txtDriver.innerHTML = `<h5 class="card-text">${price}</h5>`;
 
         if (myDrivers.drivers[i].name === "Callaway Mavrik") {
             imgDriver1.appendChild(imgDriver);
+            txtDriver1.appendChild(titleDriver);
             txtDriver1.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "Wilson Dynapower") {
             imgDriver2.appendChild(imgDriver);
+            txtDriver2.appendChild(titleDriver);
             txtDriver2.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "Callaway Epic Speed") {
             imgDriver3.appendChild(imgDriver);
+            txtDriver3.appendChild(titleDriver);
             txtDriver3.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "PING G425 Max") {
             imgDriver4.appendChild(imgDriver);
+            txtDriver4.appendChild(titleDriver);
             txtDriver4.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "Callaway Paradym") {
             imgDriver5.appendChild(imgDriver);
+            txtDriver5.appendChild(titleDriver);
             txtDriver5.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "TaylorMade SIM2") {
             imgDriver6.appendChild(imgDriver);
+            txtDriver6.appendChild(titleDriver);
             txtDriver6.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "TaylorMade Stealth 2") {
             imgDriver7.appendChild(imgDriver);
+            txtDriver7.appendChild(titleDriver);
             txtDriver7.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "Titleist TSi3") {
             imgDriver8.appendChild(imgDriver);
+            txtDriver8.appendChild(titleDriver);
             txtDriver8.appendChild(txtDriver);
         } else if (myDrivers.drivers[i].name === "Titleist TSR2") {
             imgDriver9.appendChild(imgDriver);
+            txtDriver9.appendChild(titleDriver);
             txtDriver9.appendChild(txtDriver);
         }
     }
