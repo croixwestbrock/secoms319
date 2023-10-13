@@ -52,10 +52,10 @@ function loadDrivers(myDrivers) {
         } else if (myDrivers.drivers[i].name === "TaylorMade Stealth 2") {
             imgDriver7.appendChild(imgDriver);
             txtDriver7.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "Titleist TSi 3") {
+        } else if (myDrivers.drivers[i].name === "Titleist TSi3") {
             imgDriver8.appendChild(imgDriver);
             txtDriver8.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "Titleist TSR 2") {
+        } else if (myDrivers.drivers[i].name === "Titleist TSR2") {
             imgDriver9.appendChild(imgDriver);
             txtDriver9.appendChild(txtDriver);
         }
