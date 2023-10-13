@@ -1,4 +1,4 @@
-fetch("./drivers.json")
+fetch("./data.json")
     .then(response => response.json())
     .then(myDrivers => loadDrivers(myDrivers));
 
