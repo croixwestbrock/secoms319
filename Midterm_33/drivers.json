@@ -4,55 +4,64 @@
             "name": "Callaway Mavrik",
             "brand": "Callaway",
             "year": 2020,
-            "url": "https://www.golfalot.com/Portals/0/imagesblogs/callaway/mavrikdriver/reviewhero.jpg"
+            "url": "https://www.golfalot.com/Portals/0/imagesblogs/callaway/mavrikdriver/reviewhero.jpg",
+            "price": "$299.99"
         },
         {
             "name": "TaylorMade Stealth 2",
             "brand": "TaylorMade",
             "year": 2023,
-            "url": "https://truespecgolf.com/wp-content/uploads/2023/01/TM23CWD-TA101-Stealth-2-Plus-LFS-OSN-24324-v1-scaled.jpg"
+            "url": "https://truespecgolf.com/wp-content/uploads/2023/01/TM23CWD-TA101-Stealth-2-Plus-LFS-OSN-24324-v1-scaled.jpg",
+            "price": "$599.99"
         },
         {
             "name": "PING G425 Max",
             "brand": "PING",
             "year": 2021,
-            "url": "https://www.americangolf.co.uk/on/demandware.static/-/Sites-master-catalog/default/dw99b1ab12/images-square/zoom/369531-PING-G425-Max-Driver-1.jpg"
+            "url": "https://www.americangolf.co.uk/on/demandware.static/-/Sites-master-catalog/default/dw99b1ab12/images-square/zoom/369531-PING-G425-Max-Driver-1.jpg",
+            "price": "$399.00"
         },
         {
             "name": "Callaway Paradym",
             "brand": "Callaway",
             "year": 2023,
-            "url": "https://cdn.golfmagic.com/DRIVER1.png"
+            "url": "https://cdn.golfmagic.com/DRIVER1.png",
+            "price": "$599.99"
         },
         {
             "name": "TaylorMade SIM2",
             "brand": "TaylorMade",
             "year": 2021,
-            "url": "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2021/hotlist-2021/drivers/revised-hero-images/EDIT_CLUBS_0006_GD0221_HL_DRIVER_TAYLORMADE_SIM2_HERO.jpg.rend.hgtvcom.1850.1850.suffix/1612884822432.jpeg"
+            "url": "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2021/hotlist-2021/drivers/revised-hero-images/EDIT_CLUBS_0006_GD0221_HL_DRIVER_TAYLORMADE_SIM2_HERO.jpg.rend.hgtvcom.1850.1850.suffix/1612884822432.jpeg",
+            "price": "$529.99"
         },
         {
             "name": "Titleist TSi3",
             "brand": "Titleist",
             "year": 2020,
-            "url": "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2021/hotlist-2021/drivers/revised-hero-images/EDIT_CLUBS_0002_GD0221_HL_DRIVER_TITLEIST_TSi3_HERO.jpg.rend.hgtvcom.1850.1850.suffix/1612884819435.jpeg"
+            "url": "https://golfdigest.sports.sndimg.com/content/dam/images/golfdigest/fullset/2021/hotlist-2021/drivers/revised-hero-images/EDIT_CLUBS_0002_GD0221_HL_DRIVER_TITLEIST_TSi3_HERO.jpg.rend.hgtvcom.1850.1850.suffix/1612884819435.jpeg",
+            "price": "$549.99"
         },
         {
             "name": "Titleist TSR2",
             "brand": "Titleist",
             "year": 2022,
-            "url": "https://www.golfwrx.com/wp-content/uploads/2022/09/IMG_6484.jpeg"
+            "url": "https://www.golfwrx.com/wp-content/uploads/2022/09/IMG_6484.jpeg",
+            "price": "$599.99"
         },
         {
             "name": "Wilson Dynapower",
             "brand": "Wilson",
             "year": 2023,
-            "url": "https://www.golfalot.com/Portals/0/imagesblogs/wilson/dynapowerdriver/dynapower_hero.jpg"
+            "url": "https://www.golfalot.com/Portals/0/imagesblogs/wilson/dynapowerdriver/dynapower_hero.jpg",
+            "price": "$429.99"
         },
         {
             "name": "Callaway Epic Speed",
             "brand": "Callaway",
             "year": 2021,
-            "url": "https://golfweek.usatoday.com/wp-content/uploads/sites/87/2021/01/Callaway-Epic-Speed-driver.jpg"
+            "url": "https://golfweek.usatoday.com/wp-content/uploads/sites/87/2021/01/Callaway-Epic-Speed-driver.jpg",
+            "price": "$249.99"
         }
     ]
 }

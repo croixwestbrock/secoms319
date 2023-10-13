@@ -26,10 +26,11 @@ function loadDrivers(myDrivers) {
         let name = myDrivers.drivers[i].name;
         let year = myDrivers.drivers[i].year;
         let url = myDrivers.drivers[i].url;
+        let price = myDrivers.drivers[i].price;
         let imgDriver = document.createElement("div");
         imgDriver.innerHTML = `<img src=${url} class="card-img-top" alt="..."></img>`;
         let txtDriver = document.createElement("p");
-        txtDriver.innerHTML = `<p class="card-text"> <strong>${name}</strong>, ${year}</p>`;
+        txtDriver.innerHTML = `<p class="card-text"> <strong>${name}</strong>, ${year}, ${price}</p>`;
 
         if (myDrivers.drivers[i].name === "Callaway Mavrik") {
             imgDriver1.appendChild(imgDriver);
