@@ -38,7 +38,7 @@ function loadDrivers(myDrivers) {
             imgDriver1.appendChild(imgDriver);
             txtDriver1.appendChild(titleDriver);
             txtDriver1.appendChild(txtDriver);
-        } else if (myDrivers.drivers[i].name === "Wilson Dynapower") {
+        } else if (myDrivers.drivers[i].name === "Wilson Staff DYNAPWR") {
             imgDriver2.appendChild(imgDriver);
             txtDriver2.appendChild(titleDriver);
             txtDriver2.appendChild(txtDriver);
