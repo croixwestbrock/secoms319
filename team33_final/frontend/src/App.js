@@ -25,6 +25,7 @@ function App() {
     loft: "",
     shaft: "",
     shaft_flex: "",
+    rating: 0
   };
   const [pageData, setPageData] = useState(startData);
   const [cart, setCart] = useState([]);
@@ -97,6 +98,7 @@ function App() {
             <strong>{el.name}</strong> - {el.year}
           </h4>
           <h5 class="card-text">{el.price}</h5>
+          <h6 class="card-text">Rating: {el.rating}</h6>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button
@@ -345,6 +347,7 @@ function App() {
                   <div class="card shadow-sm">
                     <img src={pageData.url} width="100%" alt="mavrik driver" />
                     <h3 id="price">{pageData.price}</h3>
+                    <h5>{pageData.rating}</h5>
                   </div>
                 </div>
                 <div class="col">
