@@ -539,10 +539,11 @@ public class disassemble {
                         //signed = -357
                         //LSL instruction
                         //Format: opCode, rm, shamt, rn, rd
-                        dType inst = setDType(byteArray, i);
-                        rt = inst.rt;
+                        rType inst = setRType(byteArray, i);
+                        rd = inst.rd;
+                        rm = inst.rm;
+                        shamt = inst.shamt;
                         rn = inst.rn;
-                        dt_address = inst.dt_address;
                         instruction = "LSL X" + rd + ", X" + rn + ", #" + shamt;
                         break;
                     }
