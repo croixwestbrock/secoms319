@@ -33,16 +33,16 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (name.length === 0) {
+      setAlert({ message: 'Name cannot be empty!', type: 'danger' });
+      return;
+    }
     if (!validateEmail(email)) {
       setAlert({ message: 'Invalid email address!', type: 'danger' });
       return;
     }
     if (!validateCard(card)) {
       setAlert({ message: 'Invalid card number!', type: 'danger' });
-      return;
-    }
-    if (name.length === 0) {
-      setAlert({ message: 'Name cannot be empty!', type: 'danger' });
       return;
     }
     // If all validations pass
