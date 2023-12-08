@@ -10,7 +10,7 @@ function App() {
   const [showing, setShowing] = useState(0);
   const [cart, setCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
-  const [showingCatalog, setShowingCatalog] = useState(true);
+  const [showingCart, setShowingCart] = useState(false);
   const [infoCorrect, setInfoCorrect] = useState(false);
 
   var startData = {
@@ -94,20 +94,22 @@ function App() {
 
   const handleHomeClick = () => {
     setShowing(0);
+    setShowingCart(false)
   }
 
   const handleAboutClick = () => {
     setShowing(10);
+    setShowingCart(false);
   }
 
   function handleToCartClick() {
     setShowing(11);
-    setShowingCatalog(false);
+    setShowingCart(true);
   }
 
   function handleToCatalogClick() {
     setShowing(0);
-    setShowingCatalog(true);
+    setShowingCart(false);
   }
 
   const listItems = ItemsCategory.map((el) => (
@@ -156,6 +158,10 @@ function App() {
     return card.match(/^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/);
   };
 
+  const validateZip = (zip) => {
+    return zip.match(/^[0-9]{5}$/)
+  }
+
   const handleCardInput = (e) => {
     const input = e.target.value.replace(/\D/g, '');
     const cardNumber = input.substring(0, 16); // limit the length to 16 digits
@@ -169,6 +175,13 @@ function App() {
     }
 
     setCard(formattedCardNumber);
+  };
+
+  const handleZipInput = (e) => {
+    const input = e.target.value;
+    const zipNumber = input.substring(0, 5); // limit the length to 5 digits
+
+    setZip(zipNumber);
   };
 
   const handleSubmit = (e) => {
@@ -185,6 +198,23 @@ function App() {
       setAlert({ message: 'Invalid card number!', type: 'danger' });
       return;
     }
+    if (address.length === 0) {
+      setAlert({ message: 'Address cannot be empty!', type: 'danger' });
+      return;
+    }
+    if (city.length === 0) {
+      setAlert({ message: 'City cannot be empty!', type: 'danger' });
+      return;
+    }
+    if (state === '' || state === 'State') {
+      setAlert({ message: 'No state picked!', type: 'danger' });
+      return;
+    }
+    if (!validateZip(zip)) {
+      setAlert({ message: 'Invalid zip code!', type: 'danger' });
+      return;
+    }
+
     // If all validations pass
     setAlert({ message: 'You have made an order!', type: 'success' });
     setInfoCorrect(true);
@@ -195,17 +225,8 @@ function App() {
       <header data-bs-theme="dark">
         <div class="navbar navbar-dark bg-dark shadow-sm">
           <div class="container">
-            {/* <a href="#" onClick={handleHomeClick} className="navbar-brand d-flex align-items-center p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" aria-hidden="true" className="me-2"
-                viewBox="0 0 24 24">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                <circle cx="12" cy="13" r="4" />
-              </svg>
-              <strong>Drivers</strong>
-            </a> */}
-            <a class="navbar-brand d-flex align-items-center p-2" onClick={showingCatalog ? handleToCartClick : handleToCatalogClick}>
-              <strong>{showingCatalog ? "View Cart" : "View Catalog"}</strong>
+            <a class="navbar-brand d-flex align-items-center p-2" onClick={showingCart ? handleToCatalogClick : handleToCartClick}>
+              <strong>{showingCart ? "View Catalog" : "View Cart"}</strong>
             </a>
             <a href="#" class="navbar-brand d-flex align-items-center p-2" onClick={handleHomeClick}>
               <strong>Golf Driver Catalog</strong>
@@ -215,9 +236,6 @@ function App() {
             </a>
           </div>
         </div>
-        {/* <button onClick={handleShowHideCatalog}>
-          {showingCatalog ? "View Cart" : "Back to Catalog"}
-        </button> */}
       </header>
 
       {showing === 0 && <div>
@@ -342,10 +360,19 @@ function App() {
                   <input class="form-control" type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" />
                 </div>
                 <div class="col-md-4">
-                  <input class="form-control" type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder="State" />
+                  <select class="form-select" type="text" value={state} onChange={(e) => setState(e.target.value)}>
+                    <option selected>State</option>
+                    <option>IA</option>
+                    <option>MN</option>
+                    <option>MI</option>
+                    <option>WI</option>
+                    <option>ND</option>
+                    <option>SD</option>
+                    <option>NE</option>
+                  </select>
                 </div>
                 <div class="col-md-2">
-                  <input class="form-control" type="text" value={zip} onChange={(e) => setZip(e.target.value)} placeholder="Zip" />
+                  <input class="form-control" type="text" value={zip} onChange={handleZipInput} placeholder="Zip" />
                 </div>
                 <div class="col-12">
                   <button class="btn btn-success" type="submit">Submit</button>
@@ -356,17 +383,26 @@ function App() {
         </div>}
 
         {infoCorrect && <div>
-          <div class="card-body">
-            <h5 class="card-title">Order summary</h5>
-            <p class="card-text">Here is a summary of your order.</p>
+          <div class="row py-3">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">Order summary</h5>
+                <p class="card-text">Here is a summary of your order.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"> <b>Name:</b> {name}</li>
+                <li class="list-group-item"> <b>Email:</b> {email}</li>
+                <li class="list-group-item"> <b>Card:</b> XXXX-XXXX-XXXX-{card.substring(15,19)}</li>
+                <li class="list-group-item"> <b>Address:</b> {address}</li>
+                <li class="list-group-item"> <b>City:</b> {city}</li>
+                <li class="list-group-item"> <b>State:</b> {state}</li>
+                <li class="list-group-item"> <b>Zip:</b> {zip}</li>
+              </ul>
+              <a href="" onclick="location.reload()" class="btn btn-secondary"> <i class="bi-arrow-left-circle"></i>
+                Return</a>
+            </div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li>Name: {name}</li>
-            <li>Email: {email}</li>
-            <li>Card: {card}</li>
-          </ul>
-          <a href="" onclick="location.reload()" class="btn btn-secondary"> <i class="bi-arrow-left-circle"></i>
-            Return</a>
         </div>}
       </div>}
 
