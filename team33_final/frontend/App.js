@@ -63,7 +63,7 @@ function App() {
         <img class="img-fluid" src={el.url} width={150} />
       </div>
       <div class="col">
-        {el.title}
+        {el.name}
       </div>
       <div class="col">
         ${el.price}
@@ -269,8 +269,15 @@ function App() {
                 <div class="card shadow-sm">
                   <img src={pageData.url} width="100%"
                     alt="mavrik driver" />
-                  <h3 id="price">${pageData.price}</h3>
-                  <h5>Rating: {pageData.rating}</h5>
+                  <h3 class="px-2" id="price">${pageData.price}</h3>
+                  <h5 class="px-3">Rating: {pageData.rating}</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-3 my-2">
+                      <button class="mx-1" type="button" onClick={() => removeFromCart(pageData)}> {" "} - {" "} </button>
+                      <button class="mx-1" type="button" onClick={() => addToCart(pageData)}> {" "} + {" "} </button>
+                      <h5 class="px-2"> In Cart: {howManyofThis(pageData.id)} </h5>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col">
@@ -319,7 +326,7 @@ function App() {
               <h2><strong>SE/COMS 319 Fall 2023 - Construction of User Interfaces</strong></h2>
               <h3>Dr. Abraham N. Aldaco Gastelum</h3>
               <h4 id="role">Professor</h4>
-              <h6 id="contacts">Novermber 27, 2023</h6>
+              <h6 id="contacts">Completed December 7, 2023</h6>
             </div>
 
           </div>
@@ -331,9 +338,20 @@ function App() {
             <div class="col-2"></div>
             <div class="col-8">
               <h1>Your Cart: </h1>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 pt-3">
+                <div class="col">
+                  <h4>Item Image</h4>
+                </div>
+                <div class="col">
+                  <h4>Item Name</h4>
+                </div>
+                <div class="col">
+                  <h4>Item Price</h4>
+                </div>
+              </div>
               <div class="row">
                 {cartItems}
-                <h4 class="py-2">Total Number of Products: {cart.length}</h4>
+                <h4 class="pt-4">Total Number of Products: {cart.length}</h4>
                 <h4 class="py-2">Order Total: ${cartTotal}</h4>
               </div>
 
@@ -393,7 +411,7 @@ function App() {
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"> <b>Name:</b> {name}</li>
                 <li class="list-group-item"> <b>Email:</b> {email}</li>
-                <li class="list-group-item"> <b>Card:</b> XXXX-XXXX-XXXX-{card.substring(15,19)}</li>
+                <li class="list-group-item"> <b>Card:</b> XXXX-XXXX-XXXX-{card.substring(15, 19)}</li>
                 <li class="list-group-item"> <b>Address:</b> {address}</li>
                 <li class="list-group-item"> <b>City:</b> {city}</li>
                 <li class="list-group-item"> <b>State:</b> {state}</li>
